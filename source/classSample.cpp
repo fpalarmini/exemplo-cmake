@@ -27,15 +27,7 @@ void ClassSample::testeSwitchClangFormat()
         break;
     case 4:
 
+        std::cout << "teste switch no clang-format" << std::endl;
         break;
-
-    case 6:
-
-        break;
-    case 10:
-
-        break;
-
-    default:
     }
 }
