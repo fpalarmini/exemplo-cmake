@@ -30,3 +30,13 @@ clang-tidy --checks="read*,performance*,hicpp*,modern*" *.cpp
 
 ## Adicionando clang-tidy no cmake(CMakeLists.txt): 
 set(CMAKE_CXX_CLANG_TIDY clang-tidy; -header-filter=.; -checks=*,-fuchsia*,-llvm-header-guard;-warning-as-error=*;)
+
+
+## Adicionando cppcheck no cmake:
+set(CMAKE_CXX_CPPCHECK cppcheck;
+    --enable=all;
+    --std=c++17;
+    -I ${INCLUDE_DIR};
+    -I ${OTHER_INCLUDE_DIR};
+    --suppress=missingIncludeSystem;
+    )
