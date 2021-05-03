@@ -26,3 +26,7 @@ clang-format -i source/*.cpp
 
 ## clang-tidy:
 clang-tidy --checks="read*,performance*,hicpp*,modern*" *.cpp
+
+
+## Adicionando clang-tidy no cmake(CMakeLists.txt): 
+set(CMAKE_CXX_CLANG_TIDY clang-tidy; -header-filter=.; -checks=*,-fuchsia*,-llvm-header-guard;-warning-as-error=*;)
